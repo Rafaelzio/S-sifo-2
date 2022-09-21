@@ -1,0 +1,219 @@
+using System;
+
+namespace Tesouro_De_Sísifo
+{
+    class Program
+    {
+        static bool loop = true;
+        static void Main(string[] args)
+        {
+            while(loop == true)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("O Tesouro de Sísifo");
+                Console.WriteLine("Escreva <jogar> para iniciar o jogo ou <sair> para fechar.");
+                Console.WriteLine("(Sempre escreva os comandos em letras minúsculas)");
+                Console.WriteLine("");
+                string resultado = Console.ReadLine();
+                resultado = Jogo(resultado);
+                if (resultado == "close")
+                {
+                    loop = false;
+                }
+            }
+
+            static string Jogo(string r1)
+            {
+
+                if (r1 == "jogar")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Você acorda em uma caverna, sem saber ao certo onde está.");
+                    Console.WriteLine("Mais à frente uma brilhante e suspeita tocha está a queimar.");
+                    Console.WriteLine("É de sua decisão ir até lá e buscar");
+                    Console.WriteLine("Você irá aventurar-se pela escuridão em meio ao perigo para buscar a <tocha>,");
+                    Console.WriteLine("ou <buscar> outra fonte de luz mais segura?");
+                    Console.WriteLine("");
+                    string resposta = Console.ReadLine();
+                    if (resposta == "tocha")
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Em meio às trevas você caminha, sua sombra cada vez mais iluminada.");
+                        Console.WriteLine("Enfim a tocha está em sua frente, mas não será tão fácil pegá-la.");
+                        Console.WriteLine("O objeto era na verdade uma tranca, iluminando o que aparentava ser uma porta secreta.");
+                        Console.WriteLine("Agora nos rochedos surgia uma mensagem discreta:");
+                        Console.WriteLine("");
+                    enigma:
+                        resposta = Console.ReadLine();
+                        if (resposta == "eu")
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("A verdade é cruel, mas também libertadora.");
+                            Console.WriteLine("A busca por um tesouro trouxe aqui sua pessoa.");
+                            Console.WriteLine("Por um deslize você nestas cavernas perdeu a vida,");
+                            Console.WriteLine("das paredes se soltou após uma manobra indevida.");
+                            Console.WriteLine("");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("E-Eu estou morto?");
+                            Console.WriteLine("");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Uma porta gigantesca se abre em sua frente,");
+                            Console.WriteLine("revelando um brilho e uma escadaria reluzente.");
+                            Console.WriteLine("Degraus com mensagens douradas revelam que sua");
+                            Console.WriteLine("jornada mais à frente o levará enfim ao verdadeiro tesouro.");
+                            Console.WriteLine("");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("Você chegou ao final verdadeiro do jogo. Para jogar novamente");
+                            Console.WriteLine("digite <recomeçar>, ou <sair> se quiser fechar o jogo.");
+                            Console.WriteLine("");
+                            resposta = Console.ReadLine();
+                            if (resposta == "recomeçar")
+                            {
+                                return "loop";
+                            }
+                            if (resposta == "sair")
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("Até mais!");
+                                return "close";
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("Sem resultado. O que isso significa?");
+                            Console.WriteLine("Você se pergunta ao voltar ao seu destino inicial.");
+                            Console.WriteLine("Para estas cavernas você veio buscando um tesouro certeiro.");
+                            Console.WriteLine("Agora você está preso, após sofrer uma queda estrondosa,");
+                            Console.WriteLine("o mistério desta caverna traz uma resposta perigosa.");
+                            Console.WriteLine("Você pode <voltar> e responder novamente a charada,");
+                            Console.WriteLine("ou <buscar> outra fonte de luz.");
+                            Console.WriteLine("");
+                            resposta = Console.ReadLine();
+                            if (resposta == "buscar")
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("O caminho brilhante da tocha certamente guarda escuridão.");
+                                Console.WriteLine("Principalmente para aqueles que em sua alma não mais estão.");
+                                Console.WriteLine("Surge por meio de um estrondo um buraco mais a frente,");
+                                Console.WriteLine("mas com todo este escuro caminhar torna-se imprudente.");
+                                Console.WriteLine("Você pode <voltar> e responder novamente a charada,");
+                                Console.WriteLine("ou <seguir> adiante.");
+                                Console.WriteLine("");
+                                resposta = Console.ReadLine();
+                                if (resposta == "seguir")
+                                {
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Entre tropeços e quedas bruscas sobre rochas grandes e pontudas você pergunta onde está sua dor.");
+                                    Console.WriteLine("Certamente a queda traria um desconforto avassalador.");
+                                    Console.WriteLine("No entanto você persiste, por alguma teimosia.");
+                                    Console.WriteLine("Algumas almas quanto ao descanso guardam certa agonia.");
+                                    Console.WriteLine("Você pode <voltar> e responder novamente a charada,");
+                                    Console.WriteLine("ou <seguir> pelo caminho perigoso.");
+                                    Console.WriteLine("");
+                                    resposta = Console.ReadLine();
+                                    if (resposta == "seguir")
+                                    {
+                                        Console.WriteLine("");
+                                        Console.WriteLine("Enfim uma cratera pode ser vista no chão.");
+                                        Console.WriteLine("Seu interior é escuro e impede sua visão,");
+                                        Console.WriteLine("mas de repente um grito assustador gela sua espinha e seu coração.");
+                                        Console.WriteLine("");
+                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        Console.WriteLine("NO FUNDO DESTE BURACO ENCONTRARÁS APENAS DOR E SOFRIMENTO.");
+                                        Console.WriteLine("REFLITA O QUE ACABA DE ACONTECER CONTIGO ENQUANTO AINDA HÁ TEMPO!");
+                                        Console.WriteLine("");
+                                        Console.ForegroundColor = ConsoleColor.White;
+                                        Console.WriteLine("Você pode <voltar> e responder novamente a charada,");
+                                        Console.WriteLine("ou <ignorar> a voz e pular dentro do buraco.");
+                                        Console.WriteLine("");
+                                        resposta = Console.ReadLine();
+                                        if (resposta == "ignorar")
+                                        {
+                                            Console.WriteLine("");
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.WriteLine("Algumas criaturas são feitas para ficar.");
+                                            Console.WriteLine("Outras obedecem e ao além vão morar.");
+                                            Console.WriteLine("Mas aquele que a morte ignora e ouvidos não dá");
+                                            Console.WriteLine("é o mesmo que para sempre nesta caverna estará");
+                                            Console.WriteLine("");
+                                            Console.ForegroundColor = ConsoleColor.White;
+                                            Console.WriteLine("Você chegou ao final do jogo, mas alguns segredos permanecem.");
+                                            Console.WriteLine("Para jogar novamente digite <recomeçar>, ou <sair> se quiser fechar o jogo.");
+                                            Console.WriteLine("");
+                                            resposta = Console.ReadLine();
+                                            if (resposta == "recomeçar")
+                                            {
+                                                return "loop";
+                                            }
+                                            if (resposta == "sair")
+                                            {
+                                                Console.WriteLine("");
+                                                Console.WriteLine("Até mais!");
+                                                return "close";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            if (resposta == "voltar")
+                            {
+                                goto enigma;
+                            }
+                        }
+                    }
+                    if (resposta == "buscar")
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Você ignora a tocha buscando um caminho mais seguro,");
+                        Console.WriteLine("mas ao andar pelo caminho oposto se perde no escuro.");
+                        Console.WriteLine("Você pode <voltar> ao início ou <continuar> andando.");
+                        Console.WriteLine("");
+                        resposta = Console.ReadLine();
+                        if (resposta == "voltar")
+                        {
+                            return "loop";
+                        }
+                        if (resposta == "continuar")
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("Entre tropeços e quedas bruscas sobre rochas grandes e pontudas você pergunta onde está sua dor:");
+                            Console.WriteLine("Certamente a queda traria um desconforto avassalador:");
+                            Console.WriteLine("Algumas almas quanto ao descanso guardam certa agonia.");
+                            Console.WriteLine("Você pode <voltar> ao início ou <continuar> andando.");
+                            Console.WriteLine("");
+                            resposta = Console.ReadLine();
+                            if (resposta == "continuar")
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("Um estrondo na caverna quebra o silêncio absoluto.");
+                                Console.WriteLine("Um buraco gigantesco surge no chão em meio ao vulto.");
+                                Console.WriteLine("Você pode <voltar> ao início ou <pular> no buraco.");
+                                Console.WriteLine("");
+                                resposta = Console.ReadLine();
+                                if (resposta == "pular")
+                                {
+                                    Console.WriteLine("");
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (r1 == "sair")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Até mais!");
+                    return "close";
+                }
+                else
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Comando não reconhecido");
+                    return "loop";
+                }
+            }
+        }
+    }
+}
